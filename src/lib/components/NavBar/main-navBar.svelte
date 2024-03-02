@@ -24,10 +24,10 @@
 <nav>
     <div class="w-full h-16 border-b shadow-lg mb-8 flex justify-center content-center p-2">
         <div class="max-w-7xl w-full flex flex-row content-center justify center mx-10">
-            <div class="flex flex-row">
+            <a class="flex flex-row" href='/'>
                 <img src={logo} alt="">
                 <h1 class="mt-auto mb-auto text-lg font-semibold"><span>Shadcn-</span><span class=" text-[#cd4423]">Svelte</span></h1>
-            </div>
+            </a>
             <div class="flex flex-row ml-auto items-center">
                 <a href={siteConfig.github}>
                     <Icon icon="ri:github-fill"  style="color: #020817 dark:white" class="size-8 opacity-75"/>

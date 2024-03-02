@@ -13,7 +13,7 @@
 				isMobile = false;
 			}
 		}
-
+		isMobile = window.innerWidth < 640;
 		window.addEventListener('resize', handleResize);
 	})
 </script>
