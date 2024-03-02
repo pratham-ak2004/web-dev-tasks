@@ -25,7 +25,7 @@
 </script>
 
 <nav>
-    <div class="w-full h-16 border-b shadow-lg mb-8 flex justify-center content-center p-2">
+    <div class="w-full h-16 border-b shadow-lg mb-8 flex justify-center content-center p-2 dark:bg-[#020b21]">
         <div class="max-w-7xl w-full flex flex-row content-center justify center mx-4">
             <button on:click={() => {hidden = !hidden}}>
                 <Icon icon="material-symbols-light:bottom-drawer"  style="color: black dark: white" class="size-8 mr-2 my-auto" />

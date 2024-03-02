@@ -22,7 +22,7 @@
 </script>
 
 <nav>
-    <div class="w-full h-16 border-b shadow-lg mb-8 flex justify-center content-center p-2">
+    <div class="w-full h-16 border-b shadow-lg mb-8 flex justify-center content-center p-2 dark:bg-[#020b21]">
         <div class="max-w-7xl w-full flex flex-row content-center justify center mx-10">
             <a class="flex flex-row" href='/'>
                 <img src={logo} alt="">
