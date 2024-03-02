@@ -1,18 +1,21 @@
-<script>
+<script lang='ts'>
 	import "../app.pcss";
     import { NavBar , MobileNavBar } from '$lib/components/NavBar';
-	import { onMount } from "svelte";
+	import { onMount } from 'svelte';
 
-	let screen = window.matchMedia("(max-width: 768px)");
 	let isMobile = false;
-	
-	onMount(() => {
-		function handleResize(e) {
-			isMobile = screen.matches;
-		}
-		screen.addEventListener("change", handleResize);
-	})
 
+	onMount(() => {
+		function handleResize() {
+			if (window.innerWidth < 640) {
+				isMobile = true;
+			} else {
+				isMobile = false;
+			}
+		}
+
+		window.addEventListener('resize', handleResize);
+	})
 </script>
 
 <div class="app">
@@ -22,7 +25,6 @@
 		<NavBar />
 	{/if}
 	
-
 	<main>
 		<slot></slot>
 	</main>

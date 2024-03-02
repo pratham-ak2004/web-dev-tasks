@@ -1,5 +1,5 @@
 <script>
-	let message = "Hello world";
+	import welcome from '$lib/images/svelte-welcome.png';
 </script>
 
 <svelte:head>
@@ -7,8 +7,8 @@
 	<meta name="description" content="Svelte demo app" />
 </svelte:head>
 
-<section>
-	{message}
+<section class="">
+	<img src={welcome} alt="Welcome to Svelte custom web components using shadcn" />
 </section>
 
 <style>
