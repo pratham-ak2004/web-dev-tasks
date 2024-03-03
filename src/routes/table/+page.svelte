@@ -112,7 +112,7 @@
             <div class="mt-8">
                 <Popover.Root>
                     <Popover.Trigger>
-                        <Button variant="secondary" class="w-40">Sample data</Button>
+                        <Button variant="secondary" class="w-40">choose columns</Button>
                     </Popover.Trigger>
                     <Popover.Content class="w-fit mt-2">
                         <div class="flex flex-col gap-4 max-h-96 max-w-96 w-full overflow-y-auto overflow-visible">
