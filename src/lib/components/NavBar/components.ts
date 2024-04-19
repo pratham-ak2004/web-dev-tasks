@@ -1,3 +1,4 @@
 export const components = [
-    ["table" , "/table"],
+    ["Table" , "/table"],
+    ["Data Table" , "/data-table"],
 ]
