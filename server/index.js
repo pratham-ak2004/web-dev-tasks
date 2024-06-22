@@ -31,7 +31,7 @@ io.on('connection', (socket) => {
 	});
 
 	socket.on('send', (data) => {
-		io.to(data.room).emit('receive', { text: data.text, by: data.by });
+		io.to(data.room).emit('receive', { text: data.text, by: data.by , time: data.time });
 	})
 });
 
