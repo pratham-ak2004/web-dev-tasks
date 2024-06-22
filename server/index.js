@@ -24,7 +24,7 @@ const io = new Server(server, {
 
 // Socket connection
 io.on('connection', (socket) => {
-	// console.log(io.engine.clientsCount);
+	// console.log(io.engine.clientsCount);;
 
 	socket.on('join', (room) => {
 		socket.join(room);
@@ -44,4 +44,6 @@ app.get('/', (req, res) => {
 	res.send('Hello World');
 });
 
-server.listen(3000);
+server.listen(3000,() =>{
+	console.log('Server is running on port 3000');
+});
