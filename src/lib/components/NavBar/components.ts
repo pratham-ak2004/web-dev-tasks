@@ -1,5 +1,6 @@
 export const components = [
 	['Table', '/table'],
 	['Data Table', '/data-table'],
-	['Public Chat', '/public']
+	['Public Chat', '/public'],
+	['Public Stream' , '/stream']
 ];

@@ -26,9 +26,9 @@
 	let isUserNameSet = false;
 	let userName = '';
 	const ROOM = 'public';
-	let messageBox: HTMLElement | null;
+	let messageBox: HTMLElement | null;	
 
-	const socket = io('http://localhost:3000', {
+	const socket = io(`${import.meta.env.VITE_SOCKET_SERVER}`, {
 		autoConnect: false
 	});
 
@@ -57,8 +57,6 @@
 	}
 
 	socket.on('receive', async (msg) => {
-		console.log(msg);
-
 		messages.push({
 			text: msg.text,
 			by: msg.by || 'anonymus',
