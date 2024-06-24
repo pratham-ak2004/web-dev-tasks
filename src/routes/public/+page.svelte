@@ -28,13 +28,13 @@
 	const ROOM = 'public';
 	let messageBox: HTMLElement | null;	
 
-	const socket = io(`${import.meta.env.VITE_SOCKET_SERVER}`, {
+	const socket = io(`${import.meta.env.VITE_SOCKET_SERVER}/chat?room=${ROOM}`, {
 		autoConnect: false
-	});
+	}).connect();
 
-	socket.on('connect', () => {
-		socket.emit('join', ROOM);
-	});
+	// socket.on('connect', () => {
+	// 	socket.emit('join', ROOM);
+	// });
 
 	// socket.on('disconnect', () => {
 	// 	console.log('socket disconnected');
@@ -48,8 +48,6 @@
 	// 	console.log('attempting reconnect');
 	// });
 
-	socket.connect();
-
 	function connectSocket() {
 		if (!socket.active) {
 			socket.connect();
@@ -60,6 +58,7 @@
 		messages.push({
 			text: msg.text,
 			by: msg.by || 'anonymus',
+			room: msg.room,
 			time: msg.time
 		});
 		messages = messages;
