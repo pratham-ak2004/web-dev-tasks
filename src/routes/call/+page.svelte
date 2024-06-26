@@ -45,7 +45,6 @@
 					//     autoGainControl: true
 					// }
 				});
-                localStream = await navigator.mediaDevices.getDisplayMedia();
 				if (localStream) {
 					localStreamElement.srcObject = localStream;
 				}
